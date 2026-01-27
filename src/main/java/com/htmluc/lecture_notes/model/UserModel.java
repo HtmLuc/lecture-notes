@@ -17,8 +17,8 @@ public class UserModel {
     @GeneratedValue(generator = "UUID") // Anotação que gera valores
     private UUID id;
 
-    private String username;
     private String name;
+    private String username;
     private String password;
 
     @CreationTimestamp
