@@ -1,5 +1,6 @@
 package com.htmluc.lecture_notes.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -17,8 +18,9 @@ public class UserModel {
     @GeneratedValue(generator = "UUID") // Anotação que gera valores
     private UUID id;
 
-    private String name;
+    @Column(unique = true) // Anotação que define valor como único
     private String username;
+    private String name;
     private String password;
 
     @CreationTimestamp
